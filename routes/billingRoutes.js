@@ -6,6 +6,11 @@ const User = mongoose.model( 'users' );
 module.exports = app => {
 
     app.post( '/api/stripe', async ( req, res ) => {
+
+        if ( !req.user ) {
+            return res.status( 401 ).send({ error: 'You must be logged into an account.' });
+        }
+
         const charge = await stripe.charges.create({
             amount: 500,
             currency: 'usd',
@@ -17,6 +22,7 @@ module.exports = app => {
         const user = await req.user.save();
 
         res.send( user );
+
     });
 
 }

@@ -1,7 +1,7 @@
 // SurveyForm displays the form for users to input their content
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-import SurveyField from './SurveyNew';
+import SurveyField from './SurveyField';
 
 class SurveyForm extends Component {
 

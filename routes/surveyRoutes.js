@@ -19,7 +19,7 @@ module.exports = app => {
             dateSent: Date.now()
         });
 
-        survey.save();
+        
     });
 
 };

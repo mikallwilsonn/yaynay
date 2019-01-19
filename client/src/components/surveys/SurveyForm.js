@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 
 const FIELDS = [
-    { label: 'Survey Title', name: 'title' },
-    { label: 'Subject Line', name: 'subject' },
-    { label: 'Email Body', name: 'body' },
+    { label: 'Survey Title', name: 'title', validationError: 'You must provide a title for your survey.' },
+    { label: 'Subject Line', name: 'subject', validationError: 'You must provide a subject for your survey.' },
+    { label: 'Email Body', name: 'body', validationError: 'Your survey needs content to show the recipient.' },
     { label: 'Recipient List', name: 'emails' }
 ];
 
@@ -46,9 +46,11 @@ class SurveyForm extends Component {
 function validate( values ) {
     const errors = {};
 
-    if ( !values.title ) {
-        errors.title = 'You must provide a title for your survey.';
-    }
+    _.each( FIELDS, ({ name, validationError }) => {
+        if ( !values[name] ) {
+            errors[name] = validationError;
+        }
+    });
 
     return errors;
 }

@@ -78,4 +78,13 @@ module.exports = app => {
         res.send({ });
     });
 
+
+    app.get( '/api/surveys', requireLogin, async ( req, res ) => {
+        const surveys = await Survey
+            .find({ _user: req.user._id })
+            .select({ recipients: false })
+            .sort({ dateSent: 'desc' });
+        res.send( surveys );
+    });
+
 };

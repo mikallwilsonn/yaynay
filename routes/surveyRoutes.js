@@ -47,20 +47,20 @@ module.exports = app => {
 
 
     app.post( '/api/surveys/webhooks', ( req, res ) => {
-        const events = _.map( req.body, ({ email, url }) => {
-            const pathname = new URL( url ).pathname;
-            const p = new Path( '/api/surveys/:survey_id/:choice' );
-   
-            const match = p.test( pathname );
-            if ( match ) {
-                return { email, survey_id: match.survey_id, choice: match.choice }
-            }
-        });
+        const p = new Path( '/api/surveys/:survey_id/:choice' );
+       
+        const events = _.chain( req.body )
+            .map(({ email, url }) => {
+                const match = p.test( new URL( url ).pathname );
+                if ( match ) {
+                    return { email, survey_id: match.survey_id, choice: match.choice }
+                }
+            })
+            .compact()
+            .uniqBy('email', 'survey_id' )
+            .value();
 
-        const compactEvents = _.compact( events );
-        const uniqueEvents = _.uniqBy( compactEvents, 'email', 'survey_id' );
-
-        console.log( uniqueEvents );
+        console.log( events );
         res.send({});
     });
 

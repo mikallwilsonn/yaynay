@@ -57,7 +57,11 @@ module.exports = app => {
             }
         });
 
-        console.log( events );
+        const compactEvents = _.compact( events );
+        const uniqueEvents = _.uniqBy( compactEvents, 'email', 'survey_id' );
+
+        console.log( uniqueEvents );
+        res.send({});
     });
 
 };

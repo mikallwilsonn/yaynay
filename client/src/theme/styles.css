@@ -2,6 +2,10 @@
 
 *, html, body { font-family: 'Roboto', sans-serif; }
 
+body {
+    background: url( './hex.png' ) repeat;
+}
+
 .app-wrapper div nav {}
 
 div.card {
@@ -11,4 +15,15 @@ div.card {
 
 p.survey__list--body {
     margin-top:25px !important;
+}
+
+.page-footer {
+    margin-top:50px;
+}
+
+#landing {
+    background: url( './landing-bg.jpg' ) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height:750px;
 }

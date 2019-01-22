@@ -23,8 +23,8 @@ class SurveyList extends Component {
                         'rgba( 239, 83, 80, 0.75 )',
                     ],
                     borderColor: [
-                        'rgba( 118, 225, 3, 1 )',
-                        'rgba( 239, 83, 80, 1 )',
+                        '#FFF',
+                        '#FFF',
 
                     ],
                     borderWidth: 2
@@ -51,11 +51,18 @@ class SurveyList extends Component {
                         </div>
                     </div>
                     <div className="card-action row">
-                        <div className="col s6">
+                        <div className="col s2">
                             <p className="text-green">Yes: {survey.yes}</p>
                         </div>
-                        <div className="col s6">
+                        <div className="col s2">
                             <p className="text-red">No: {survey.no}</p>
+                        </div>
+                        <div className="col s8">
+                            <p className="right-align">
+                                <a className="red-text" href="/">
+                                    Delete Survey
+                                </a>
+                            </p> 
                         </div>
                     </div>
                 </div>

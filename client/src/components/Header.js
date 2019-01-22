@@ -11,7 +11,9 @@ class Header extends Component {
                 return;
             case false:
                 return (
-                    <li><a href="/auth/google">Login with Google</a></li>
+                    <li>
+                        <a href="/auth/google">Login with Google</a>
+                    </li>
                 );
             default: 
                 return [
@@ -24,8 +26,8 @@ class Header extends Component {
 
     render() {
         return (
-            <nav>
-                <div className="nav-wrapper">
+            <nav className="red lighten-1">
+                <div className="container nav-wrapper">
 
                     <Link 
                         to={ this.props.auth ? '/surveys' : '/' } 

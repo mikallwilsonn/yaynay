@@ -11,7 +11,9 @@ class Header extends Component {
                 return;
             case false:
                 return (
-                    <li><a href="/auth/google">Login with Google</a></li>
+                    <li>
+                        <a href="/auth/google">Login with Google</a>
+                    </li>
                 );
             default: 
                 return [
@@ -24,7 +26,7 @@ class Header extends Component {
 
     render() {
         return (
-            <nav>
+            <nav className="red lighten-1">
                 <div className="nav-wrapper">
 
                     <Link 

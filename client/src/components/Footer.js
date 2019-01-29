@@ -4,41 +4,37 @@ import { Link } from 'react-router-dom';
 class Footer extends Component {
     render () {
         return (
-            <footer class="page-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col l6 s12">
-                            <h5 class="white-text">Emaily</h5>
-                            <p class="grey-text text-lighten-4">Emaily is the perfect option for quickly checking in with your users.</p>
+            <footer className="page-footer">
+                <div className="container">
+                    <div className="row">
+                        <div className="col l6 s12">
+                            <h5 className="white-text">Emaily</h5>
+                            <p className="grey-text text-lighten-4">Emaily is the perfect option for quickly checking in with your users.</p>
                         </div>
-                        <div class="col l4 offset-l2 s12">
+                        <div className="col l4 offset-l2 s12">
                             <ul>
                                 <li>
-                                    <a class="grey-text text-lighten-3" href="/">
+                                    <Link className="grey-text text-lighten-3" to="/">
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a class="grey-text text-lighten-3" href="/surveys">
+                                    <Link className="grey-text text-lighten-3" to="/surveys">
                                         Dashboard
-                                    </a>
+                                    </Link>
                                 </li>
+
                                 <li>
-                                    <a class="grey-text text-lighten-3" href="/help">
-                                        Help
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="grey-text text-lighten-3" href="/logout">
+                                    <Link className="grey-text text-lighten-3" to="/logout">
                                         Logout
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="footer-copyright">
-                    <div class="container">
+                <div className="footer-copyright">
+                    <div className="container">
                         © 2019 Emaily
                     </div>
                 </div>

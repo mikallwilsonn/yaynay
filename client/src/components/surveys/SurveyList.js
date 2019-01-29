@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
 import { Doughnut } from 'react-chartjs-2';
 
-
 class SurveyList extends Component {
 
     componentDidMount() {

@@ -2,9 +2,11 @@
 
 *, html, body { font-family: 'Roboto', sans-serif; }
 
+/*
 body {
     background: url( './hex.png' ) repeat;
 }
+*/
 
 .app-wrapper div nav {}
 

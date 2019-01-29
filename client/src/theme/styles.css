@@ -24,8 +24,24 @@ p.survey__list--body {
 }
 
 #landing {
-    background: url( './landing-bg.jpg' ) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height:750px;
+    margin-top:10px;
+    padding: 250px auto !important;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+
+#landing div {
+    padding:100px 10px;
+}
+
+#landing h1 {
+    font-family: 'Permanent Marker', cursive !important;
+    font-size:15rem;
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }

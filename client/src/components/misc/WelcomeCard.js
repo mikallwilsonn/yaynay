@@ -30,6 +30,7 @@ class WelcomeCard extends Component {
                     <div className="col s12">
                         <p className="right-align">
                             <Link className="red-text" to="/surveys/new">
+                                <i className="mini material-icons">add</i>
                                 Create New Survey
                             </Link>
                         </p> 

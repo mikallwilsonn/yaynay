@@ -24,11 +24,6 @@ class Footer extends Component {
                                     </Link>
                                 </li>
 
-                                <li>
-                                    <Link className="grey-text text-lighten-3" to="/logout">
-                                        Logout
-                                    </Link>
-                                </li>
                             </ul>
                         </div>
                     </div>

@@ -45,3 +45,7 @@ p.survey__list--body {
     -webkit-text-fill-color: transparent;
     
 }
+
+.welcome-avatar {
+    border-radius:250px;
+}

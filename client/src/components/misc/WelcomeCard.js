@@ -15,10 +15,29 @@ class WelcomeCard extends Component {
         }
     }
 
+
+    renderAvatar = ( value ) => {
+        if ( value ) {
+            return (
+                <img 
+                    className="welcome-avatar"
+                    src={value.image} 
+                    alt={`${value.name.firstName}'s avatar`} 
+                />
+            );
+        }
+    }
+
+
     render() {
         return (
             <div className="card white darken-1">
                 <div className="card-content dark-text row">
+                    <div className="col s12">
+                        <UserContext.Consumer>
+                            {(value) => this.renderAvatar( value )}
+                        </UserContext.Consumer>
+                    </div>
                     <div className="col s12">
                         <UserContext.Consumer>
                             {(value) => this.renderWelcomeMessage( value )}

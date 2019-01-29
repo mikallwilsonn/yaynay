@@ -6,7 +6,13 @@ const userSchema = new Schema({
     credits: {
         type: Number,
         default: 0
-    }
+    },
+    name: {
+        firstName: String,
+        lastName: String
+    },
+    image: String,
+    email: String,
 });
 
 

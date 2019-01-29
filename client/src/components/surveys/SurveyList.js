@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import { connect } from 'react-redux';
-import { fetchSurveys } from '../../actions';
+import { fetchSurveys, deleteSurvey } from '../../actions';
 import { Doughnut } from 'react-chartjs-2';
 import Loader from '../misc/Loader';
+import { Link } from 'react-router-dom';
 
 class SurveyList extends Component {
 
@@ -65,9 +66,11 @@ class SurveyList extends Component {
                         </div>
                         <div className="col s8">
                             <p className="right-align">
-                                <a className="red-text" href="/">
-                                    Delete Survey
-                                </a>
+                                <Link 
+                                    to={`/surveys/delete/${survey._id}`} 
+                                    className="red white-text btn-flat">
+                                        Delete Survey <i className="material-icons right">delete</i>
+                                </Link>
                             </p> 
                         </div>
                     </div>
@@ -91,4 +94,4 @@ function mapStateToProps({ surveys }) {
 }
 
 
-export default connect( mapStateToProps, { fetchSurveys })( SurveyList );
+export default connect( mapStateToProps, { fetchSurveys, deleteSurvey })( SurveyList );

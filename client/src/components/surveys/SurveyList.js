@@ -3,7 +3,7 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
 import { Doughnut } from 'react-chartjs-2';
-
+import Loader from '../misc/Loader';
 
 class SurveyList extends Component {
 
@@ -12,6 +12,11 @@ class SurveyList extends Component {
     };
 
     renderSurveys() {
+
+        if ( !this.props.surveys ) {
+            return <Loader />;
+        }
+
         return this.props.surveys.map( survey => {
             let data = {
                 labels: ["Yes", "No"],
@@ -30,6 +35,7 @@ class SurveyList extends Component {
                     borderWidth: 2
                 }]
             }
+
             return (
                 <div className="card white darken-1" key={survey._id}>
                     <div className="card-content dark-text row">
@@ -75,7 +81,6 @@ class SurveyList extends Component {
             <div>
                 {this.renderSurveys()}
             </div>
-            
         );
     }
 }

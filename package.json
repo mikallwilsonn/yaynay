@@ -1,5 +1,5 @@
 {
-  "name": "emaily",
+  "name": "yaynay",
   "version": "1.0.0",
   "description": "FullStack Node, Express, React/Redux and MongoDB application to send emails for user feedback",
   "main": "index.js",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikallwilsonn/emaily.git"
+    "url": "git+https://github.com/mikallwilsonn/yaynay.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mikallwilsonn/emaily/issues"
+    "url": "https://github.com/mikallwilsonn/yaynay/issues"
   },
-  "homepage": "https://github.com/mikallwilsonn/emaily#readme",
+  "homepage": "https://github.com/mikallwilsonn/yaynay#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
